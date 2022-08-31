@@ -1,4 +1,4 @@
-import { GetRoutes } from '../CommonComponentCode/Functions';
+import { GetRoutes } from '../CommonComponentCode/Routes';
 import { ChangeApp } from '../Dock/ChangeApp';
 
 /* IN PORTFOLIO REVIEW */

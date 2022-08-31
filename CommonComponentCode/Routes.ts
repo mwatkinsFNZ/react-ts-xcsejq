@@ -1,10 +1,5 @@
-import { LocalStorageKeys } from '../CommonComponentCode/Constants';
+import { LocalStorageKeys } from '../CommonComponentCode/LocalStorage';
 import { LocalStorage } from '../CommonComponentCode/Types';
-
-export function updateLocalStorage(localStorage: LocalStorage): void {
-  // Extract from POA Core
-  // Set local storage for given data
-}
 
 export function GetRoutes() {
   // returns the full redirection mapping

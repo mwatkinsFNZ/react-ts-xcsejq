@@ -5,7 +5,7 @@ import { LocalStorage } from '../CommonComponentCode/Types';
 export function ChangeApp(url: string, localStorage: LocalStorage[]): void {
   if (/* change of app */ true) {
     // remove previous local storage
-    // not sure how this will work as
+    // not sure how this will work with some local-storage such as the styling done in shell/poa
     console.log('remove existing local storage');
   }
 

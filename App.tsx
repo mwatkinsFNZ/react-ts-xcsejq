@@ -4,7 +4,10 @@ import { NavigateToBreachSummary } from './PortfolioReview/NavigateToBreachSumma
 export default function App() {
   return (
     <div>
-      <p>check console log for details</p>
+      <p>
+        Open the console at the bottom to see the log results of what would
+        happen
+      </p>
       <button onClick={() => NavigateToBreachSummary()}>
         Go To Breach Summary
       </button>

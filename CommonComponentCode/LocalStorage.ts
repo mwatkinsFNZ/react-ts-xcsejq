@@ -3,6 +3,7 @@ import { LocalStorage } from '../CommonComponentCode/Types';
 export const LocalStorageKeys = {
   Breach_Reports_Summary_Modal: 'breaches-reports-modal-open',
   Breach_Reports_Summary_ID: 'reports-page-breaches-id',
+  PortfolioReview_BuySell: 'portfolio-review-buy-sell',
 };
 
 export function updateLocalStorage(localStorage: LocalStorage): void {

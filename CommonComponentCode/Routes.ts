@@ -1,10 +1,10 @@
 import { LocalStorageKeys } from '../CommonComponentCode/LocalStorage';
-import { LocalStorage } from '../CommonComponentCode/Types';
+import { LocalStorage, Routes } from '../CommonComponentCode/Types';
 
-export function GetRoutes() {
+export function GetRoutes(): Routes {
   // returns the full redirection mapping
   return {
-    Breaches: {
+    breaches: {
       overviewPage: {
         url: '/dashboard',
       },
@@ -21,6 +21,20 @@ export function GetRoutes() {
           {
             key: LocalStorageKeys.Breach_Reports_Summary_ID,
             value: breachId,
+          },
+        ],
+      },
+    },
+    portfolioReview: {
+      reviewOnly: {
+        url: '/',
+      },
+      buySell: {
+        url: '/',
+        localStorage: (): LocalStorage[] => [
+          {
+            key: LocalStorageKeys.PortfolioReview_BuySell,
+            value: 'true',
           },
         ],
       },

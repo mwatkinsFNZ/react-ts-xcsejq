@@ -8,12 +8,18 @@ export const PortfoliosApp: FC<{ changeApp: ChangeAppType }> = ({
 }) => {
   const navigateToBreachSummary = () => {
     const route = GetRoutes().breaches.breachSummary;
-    changeApp(route.url, route.localStorage('123'));
+    changeApp({
+      ...route,
+      localStorage: route.localStorage('123'),
+    });
   };
+
+  const localStorage = JSON.stringify(window.localStorage);
 
   return (
     <div>
       <h1>Portfolio Review</h1>
+      <p>Local Storage: {localStorage}</p>
       <button onClick={() => navigateToBreachSummary()}>
         Go To Breach Summary
       </button>

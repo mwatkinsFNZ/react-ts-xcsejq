@@ -1,5 +1,5 @@
-// used by dock to retain the existing local storage for each page
-export type Route = {
+export type ChangeAppRoute = {
+  key: string;
   url: string;
   localStorage?: LocalStorage[];
 };
@@ -16,12 +16,15 @@ export type Routes = {
 
 export type BreachesRoutes = {
   overviewPage: {
+    key: string;
     url: string;
   };
   reportsPage: {
+    key: string;
     url: string;
   };
   breachSummary: {
+    key: string;
     url: string;
     localStorage: (breachId: string) => LocalStorage[];
   };
@@ -29,10 +32,12 @@ export type BreachesRoutes = {
 
 export type PortfolioReviewRoutes = {
   reviewOnly: {
-    url: string;
+    key: string;
+    url: (portfolioId: number) => string;
   };
   buySell: {
-    url: string;
+    key: string;
+    url: (portfolioId: number) => string;
     localStorage: () => LocalStorage[];
   };
 };

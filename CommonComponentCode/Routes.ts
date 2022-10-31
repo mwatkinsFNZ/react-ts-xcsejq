@@ -2,17 +2,19 @@ import { LocalStorageKeys } from '../CommonComponentCode/LocalStorage';
 import { LocalStorage, Routes } from '../CommonComponentCode/Types';
 
 export function GetRoutes(): Routes {
-  // returns the full redirection mapping
   return {
     breaches: {
       overviewPage: {
-        url: '/dashboard',
+        key: 'breaches_overviewPage',
+        url: '/breaches/dashboard',
       },
       reportsPage: {
-        url: '/breaches-reports-page',
+        key: 'breaches_reportsPage',
+        url: '/breaches/breaches-reports-page',
       },
       breachSummary: {
-        url: '/breaches-reports-page',
+        key: 'breaches_breachSummary',
+        url: '/breaches/breaches-reports-page',
         localStorage: (breachId: string): LocalStorage[] => [
           {
             key: LocalStorageKeys.Breach_Reports_Summary_Modal,
@@ -27,10 +29,12 @@ export function GetRoutes(): Routes {
     },
     portfolioReview: {
       reviewOnly: {
-        url: '/',
+        key: 'portfolioReview_reviewOnly',
+        url: (portfolioId) => `/portfolios/${portfolioId}`,
       },
       buySell: {
-        url: '/',
+        key: 'portfolioReview_buySell',
+        url: (portfolioId) => `/portfolios/${portfolioId}`,
         localStorage: (): LocalStorage[] => [
           {
             key: LocalStorageKeys.PortfolioReview_BuySell,

@@ -1,12 +1,9 @@
 import * as React from 'react';
-import { BrowserRouter, Redirect, Route } from 'react-router-dom';
-import { BreachesApp } from '../Breaches/App';
+import { BrowserRouter } from 'react-router-dom';
 import { useChangeApp } from '../Dock/ChangeApp';
-import { PortfoliosApp } from '../PortfolioReview/App';
+import Routes from '../Dock/Routes';
 
 export default function DockApp() {
-  const { changeApp } = useChangeApp();
-
   return (
     <div>
       <p>
@@ -14,15 +11,7 @@ export default function DockApp() {
         happen
       </p>
       <BrowserRouter>
-        <Route path={'/Breaches'}>
-          <BreachesApp changeApp={changeApp} />
-        </Route>
-        <Route path={'/Portfolios'}>
-          <PortfoliosApp changeApp={changeApp} />
-        </Route>
-        <Route path={'/'}>
-          <Redirect to={'/Portfolios'} />
-        </Route>
+        <Routes />
       </BrowserRouter>
     </div>
   );

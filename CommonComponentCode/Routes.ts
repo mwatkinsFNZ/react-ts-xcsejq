@@ -1,4 +1,3 @@
-import { LocalStorageKeys } from '../CommonComponentCode/LocalStorage';
 import { LocalStorage, Routes } from '../CommonComponentCode/Types';
 
 export function GetRoutes(): Routes {
@@ -17,11 +16,11 @@ export function GetRoutes(): Routes {
         url: '/breaches/breaches-reports-page',
         localStorage: (breachId: string): LocalStorage[] => [
           {
-            key: LocalStorageKeys.Breach_Reports_Summary_Modal,
+            key: 'breaches-reports-modal-open',
             value: 'true',
           },
           {
-            key: LocalStorageKeys.Breach_Reports_Summary_ID,
+            key: 'reports-page-breaches-id',
             value: breachId,
           },
         ],
@@ -37,7 +36,7 @@ export function GetRoutes(): Routes {
         url: (portfolioId) => `/portfolios/${portfolioId}`,
         localStorage: (): LocalStorage[] => [
           {
-            key: LocalStorageKeys.PortfolioReview_BuySell,
+            key: 'portfolio-review-buy-sell',
             value: 'true',
           },
         ],

@@ -1,3 +1,8 @@
+export type LocalStorageKeys =
+  | 'breaches-reports-modal-open'
+  | 'reports-page-breaches-id'
+  | 'portfolio-review-buy-sell';
+
 export type ChangeAppRoute = {
   key: string;
   url: string;
@@ -5,7 +10,7 @@ export type ChangeAppRoute = {
 };
 
 export type LocalStorage = {
-  key: string;
+  key: LocalStorageKeys;
   value: string;
 };
 

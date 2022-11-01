@@ -3,43 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { updateLocalStorage } from '../CommonComponentCode/LocalStorage';
 import { ChangeAppRoute, LocalStorage } from '../CommonComponentCode/Types';
 
-type state = Map<
-  string,
-  {
-    url: string;
-    localStorage: LocalStorage[];
-    children?: state;
-  }
->;
-
-const testState: state = new Map([
-  [
-    'breach',
-    {
-      url: '',
-      localStorage: [],
-      children: new Map([
-        [
-          'reports',
-          {
-            url: '',
-            localStorage: []
-          }
-        ]
-      ])
-    },
-  ],
-  [
-    'portfolioReview',
-    {
-      url: '',
-      localStorage: [],
-    },
-  ],
-]);
-
-testState.get('breach').children
-
 export type ChangeAppType = (
   changeApp: ChangeAppRoute,
   override: boolean
